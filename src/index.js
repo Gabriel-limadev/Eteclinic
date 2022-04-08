@@ -1,9 +1,11 @@
 import express from "express";
 import { config } from 'dotenv';
+
 import router from './routers/router.js'
 const env = config()
 
 const app = express()
+app.use(express.json())
 const port = process.env.PORT
 
 app.use('/', router);

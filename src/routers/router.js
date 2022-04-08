@@ -1,9 +1,9 @@
-import Router from "express";
-const router = Router();
+import { Router } from "express";
+import user from '../controller/userController.js'
 
-export default router.get('/teste', (req, res) => {
-    res.status(200).json({
-        message: 'Deu certoooooooooooooooooooooooooooooo'
-    })
-})
+const router = Router()
+
+router.use('/user', user)
+
+export default router
 
